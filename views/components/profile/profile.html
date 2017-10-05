@@ -1,0 +1,72 @@
+<navbar user="profile.user"
+        sign-in="profile.signIn(credentials)">
+</navbar>
+
+<section class="hero has-gradient-primary">
+  <div class="hero-body">
+    <div class="container">
+      <message from="'Profile'" msg="profile.message"></message>
+    </div>
+  </div>
+</section>
+<br>
+<section>
+  <div class="container">
+    <div class="profile-tabs">
+      <ul>
+        <li ng-class="{'active' : profile.activeTab == 'account'}"
+            ng-click="profile.setActiveTab('account')">Account</li>
+        <li ng-class="{'active' : profile.activeTab == 'inventory'}"
+            ng-click="profile.setActiveTab('inventory')">Inventory</li>
+        <li ng-class="{'active' : profile.activeTab == 'team'}"
+            ng-click="profile.setActiveTab('team')">Team</li>
+        <li ng-class="{'active' : profile.activeTab == 'settings'}"
+            ng-click="profile.setActiveTab('settings')">Settings</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" ng-show="profile.activeTab == 'account'">
+      <h4 class="title is-5 has-text-white">Informations</h3>
+      <p>your name : {{ profile.user.username }}</p>
+      <p>your gold : {{ profile.user.gold }}</p>
+    </div>
+
+    <div class="tab-content" ng-show="profile.activeTab == 'inventory'">
+      <h4 class="title is-5 has-text-white">Heroes</h3>
+      <ul class="inventory">
+        <li ng-repeat="h in profile.user.inventory" class="card inventory-item" ng-if="h.type === 'hero'">
+          <div class="card-header">
+            <span>
+              <img ng-src="{{ h.image }}" alt="hero image">
+            </span>
+            <span class="card-header-title has-text-white">
+              {{h.name}}
+            </span>
+          </div>
+        </li>
+      </ul>
+      <br>
+      <h4 class="title is-5 has-text-white">Items</h3>
+      <ul class="inventory">
+        <li ng-repeat="i in profile.user.inventory" class="card inventory-item" ng-if="i.type === 'item'">
+          <div class="card-header">
+            <span>
+              <img ng-src="{{ i.image }}" alt="item image">
+            </span>
+            <span class="card-header-title has-text-white">
+              {{i.name}}
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content" ng-show="profile.activeTab == 'team'">
+      <h4 class="title is-5 has-text-primary">WORK IN PROGRESS</h3>
+    </div>
+
+    <div class="tab-content" ng-show="profile.activeTab == 'settings'">
+      <h4 class="title is-5 has-text-primary">WORK IN PROGRESS</h3>
+    </div>
+  </div> <!-- /container-->
+</section>

@@ -1,0 +1,96 @@
+<navbar user="cart.user">
+</navbar>
+
+<section class="hero has-gradient-primary">
+  <div class="hero-body">
+    <div class="container">
+      <message from="'Cart'" msg="cart.message"></message>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div ng-if="!cart.purchaseSuccess">
+    <h3 class="title is-3 has-text-white">Your Cart</h3>
+    <div class="columns is-multiline">
+      <ul class="column is-6 is-offset-3">
+        <li ng-if="cart.user.cart.length <=0" class="has-text-centered">
+          <p class="has-text-white has-text-centered">Your shopping cart appears to be empty.</p>
+          <br>
+          <a href="#!/heroes">
+            <button class="button is-large is-primary">Keep shopping</button>
+          </a>
+        </li>
+        <li ng-repeat="a in cart.user.cart" class="card cart-item">
+          <header class="card-header">
+            <span>
+              <img ng-src="{{ a.image }}" alt="article image">
+            </span>
+            <span class="card-header-title has-text-white">
+              {{a.name}}
+            </span>
+            <button class="button is-primary is-pulled-right">
+              <p>
+                <span class="icon is-primary"><i class="fa fa-search-plus"></i></span>
+                <span class="is-hidden-mobile">Details</span>
+              </p>
+            </button>
+            <button class="button is-primary is-pulled-right" ng-click="cart.removeArticle(a)">
+              <p>
+                <span class="icon is-small"><i class="fa fa-trash"></i></span>
+                <span class="is-hidden-mobile">Remove</span>
+              </p>
+            </button>
+            <p class="article-price">
+              <span class=" is-pulled-right has-text-white">
+                {{ a.price }}
+                <span class="icon is-medium"><i class="fa fa-gg-circle has-text-warning"></i></span>
+              </span>
+            </p>
+          </header>
+        </li>
+      </ul>
+      <div class="column is-6 is-offset-3" ng-if='cart.user.cart.length > 0'>
+        <p>
+          <strong class="has-text-white">Your Gold :</strong>
+          <span class=" is-pulled-right has-text-white">
+            {{ cart.user.gold }}
+            <span class="icon is-medium"><i class="fa fa-gg-circle has-text-warning"></i></span>
+          </span>
+        </p>
+      </div>
+      <div class="column is-6 is-offset-3" ng-if='cart.user.cart.length > 0'>
+        <p>
+          <strong class="has-text-white">Total :</strong>
+          <span class=" is-pulled-right has-text-white">
+            {{ cart.getTotal() }}
+            <span class="icon is-medium"><i class="fa fa-gg-circle has-text-warning"></i></span>
+          </span>
+        </p>
+      </div>
+      <div class="column is-6 is-offset-3 is-clearfix" ng-if='cart.user.cart.length > 0'>
+        <p>
+          <strong class="has-text-white">Remaining gold after purchase :</strong>
+          <span class=" is-pulled-right"
+                ng-class="{'has-text-white' : cart.remainingGold() > 0,
+                            'has-text-danger' : cart.remainingGold()<0}">
+            {{ cart.remainingGold() }}
+            <span class="icon is-medium"><i class="fa fa-gg-circle has-text-warning"></i></span>
+          </span>
+        </p>
+        <br>
+        <button class="button is-primary is-pulled-right"
+                ng-if='cart.user.cart.length > 0'
+                ng-click="cart.buy()">
+          <p><span class="icon is-small"><i class="fa fa-check-square-o"></i></span> Confirm purchase</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="has-text-centered" ng-if="cart.purchaseSuccess">
+    <br><br>
+    <p class="title is-3 has-text-white">Purchase Successful !</p>
+    <a href="#!/"><button class="button is-primary is-large">Back to home</button></a>
+  </div>
+</section>

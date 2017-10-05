@@ -1,0 +1,206 @@
+{
+  "heroes" : [
+    {
+      "name": "Knight",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/c/cb/Knight_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/1/19/HeroAlaricV.png/revision/latest?cb=20100126220111&path-prefix=en"
+    },
+    {
+      "name": "Cleric",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/1/14/Cleric_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/9/9b/HeroBenediktV.png/revision/latest?cb=20150210203352&path-prefix=en"
+    },
+    {
+      "name": "Ranger",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/9/92/Ranger_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/6/62/HeroWyngaalV.png/revision/latest?cb=20100126180000&path-prefix=en"
+    },
+    {
+      "name": "Druid",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/f/f3/Druid_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/1/11/HeroYlthinV.png/revision/latest?cb=20100126180042&path-prefix=en"
+    },
+    {
+      "name": "Alchemist",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/1/16/Alchemist_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/b/bd/HeroMaahirV.png/revision/latest?cb=20100126212555&path-prefix=en"
+    },
+    {
+      "name": "Wizard",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/0/07/Wizard_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/6/67/HeroRaelagV.png/revision/latest?cb=20150415175820&path-prefix=en"
+    },
+    {
+      "name": "Demoniac",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/a/a7/Demoniac_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/f/f7/HeroDelebV.png/revision/latest?cb=20100126230812&path-prefix=en"
+    },
+    {
+      "name": "Heretic",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/4/49/Heretic_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/3/38/HeroBrandV.png/revision/latest?cb=20100126222045&path-prefix=en"
+    },
+    {
+      "name": "Death Knight",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/1/1b/Death_Knight_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/d/df/HeroAgraelV.png/revision/latest?cb=20100126230513&path-prefix=en"
+    },
+    {
+      "name": "Necromancer",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/6/6e/Necromancer_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/4/4f/HeroDeirdreV.png/revision/latest?cb=20100126231712&path-prefix=en"
+    },
+    {
+      "name": "Overlord",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/9/9a/Overlord_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/f/f7/HeroSinitarV.png/revision/latest?cb=20100126213543&path-prefix=en"
+    },
+    {
+      "name": "Warlock",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/9/94/Warlock_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/9/9c/HeroYrbethV.png/revision/latest?cb=20100126213833&path-prefix=en"
+    },
+    {
+      "name": "Barbarian",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/f/f8/Barbarian_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/3/36/HeroHaggashV.png/revision/latest?cb=20100126215102&path-prefix=en"
+    },
+    {
+      "name": "BattleMage",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/b/be/Battle_Mage_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/b/b3/HeroGorshakV.png/revision/latest?cb=20100126214929&path-prefix=en"
+    },
+    {
+      "name": "BeastMaster",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/1/18/Beastmaster_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/4/4e/HeroErlingV.png/revision/latest?cb=20100126223959&path-prefix=en"
+    },
+    {
+      "name": "Witch",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/e/e7/Witch_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/5/57/HeroEbbaV.png/revision/latest?cb=20100126222126&path-prefix=en"
+    },
+    {
+      "name": "Planeswalker",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/c/c4/Planeswalker_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/e/ee/HeroNurV.png/revision/latest?cb=20100126212935&path-prefix=en"
+    },
+    {
+      "name": "Elementalist",
+      "type": "hero",
+      "price": "2500",
+      "model": "http://heroes.thelazy.net/wiki/images/c/c4/Elementalist_on_battlefield.gif",
+      "image" : "https://vignette.wikia.nocookie.net/mightandmagic/images/3/31/HeroDiraelV.png/revision/latest?cb=20100126175301&path-prefix=en"
+    }
+  ],
+  "items" : [
+    {
+      "name" : "Cape of Conjuring",
+      "type": "item",
+      "price" : "150",
+      "image" : "http://heroes.thelazy.net/wiki/images/f/fe/Artifact_Cape_of_Conjuring.gif"
+    },
+    {
+      "name" : "Skull Helmet",
+      "type": "item",
+      "price" : "300",
+      "image" : "http://heroes.thelazy.net/wiki/images/8/8d/Artifact_Skull_Helmet.gif"
+    },
+    {
+      "name" : "Crown of the Supreme Magi",
+      "type": "item",
+      "price" : "500",
+      "image" : "http://heroes.thelazy.net/wiki/images/a/a3/Artifact_Crown_of_the_Supreme_Magi.gif"
+    },
+    {
+      "name" : "Charm of Mana",
+      "type": "item",
+      "price" : "50",
+      "image" : "http://heroes.thelazy.net/wiki/images/0/04/Artifact_Charm_of_Mana.gif"
+    },
+    {
+      "name" : "Cards of Prophecy",
+      "type": "item",
+      "price" : "100",
+      "image" : "http://heroes.thelazy.net/wiki/images/5/5d/Artifact_Cards_of_Prophecy.gif"
+    },
+    {
+      "name" : "Golden Bow",
+      "type": "item",
+      "price" : "800",
+      "image" : "http://heroes.thelazy.net/wiki/images/5/54/Artifact_Golden_Bow.gif"
+    },
+    {
+      "name" : "Vial of Lifeblood",
+      "type": "item",
+      "price" : "1000",
+      "image" : "http://heroes.thelazy.net/wiki/images/4/45/Artifact_Vial_of_Lifeblood.gif"
+    },
+    {
+      "name" : "Black Shard of the Dead Knight",
+      "type": "item",
+      "price" : "300",
+      "image" : "http://heroes.thelazy.net/wiki/images/a/aa/Artifact_Blackshard_of_the_Dead_Knight.gif"
+    },
+    {
+      "name" : "Red Dragon Flame Tongue",
+      "type": "item",
+      "price" : "400",
+      "image" : "http://heroes.thelazy.net/wiki/images/c/c9/Artifact_Red_Dragon_Flame_Tongue.gif"
+    },
+    {
+      "name" : "Sword of Judgment",
+      "type": "item",
+      "price" : "2000",
+      "image" : "http://heroes.thelazy.net/wiki/images/d/d6/Artifact_Sword_of_Judgement.gif"
+    },
+    {
+      "name" : "Tunic of the Cyclops King",
+      "type": "item",
+      "price" : "500",
+      "image" : "http://heroes.thelazy.net/wiki/images/a/a4/Artifact_Tunic_of_the_Cyclops_King.gif"
+    },
+    {
+      "name" : "Dragon Scale Armor",
+      "type": "item",
+      "price" : "800",
+      "image" : "http://heroes.thelazy.net/wiki/images/b/b9/Artifact_Dragon_Scale_Armor.gif"
+    }
+  ],
+  "spells" : [
+  ]
+}

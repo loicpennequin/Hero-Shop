@@ -1,0 +1,86 @@
+<nav class="navbar is-transparent is-black">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class='navbar-item' href="#!/"><strong>Hero Shop</strong></a>
+      <button class="button navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <p class="navbar-link">Categories</p>
+          <div class="navbar-dropdown">
+            <a href="#!/heroes" class="navbar-item">Heroes</a>
+            <a href="#!/items" class="navbar-item">Items</a>
+            <a href="#" class="navbar-item">Spells</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class='navbar-item has-dropdown'
+             ng-if="!navbar.user"
+             ng-class="{'is-active': navbar.displayLogin}"
+             >
+          <a class="navbar-link" ng-click="navbar.toggleLogin()">
+            <p><span class="icon"><i class="fa fa-user"></i></span> Sign In</p>
+          </a>
+
+          <div class="navbar-dropdown">
+            <div class="navbar-item">
+              <form name="navbar.signinForm" ng-submit="navbar.signIn(navbar.credentials)">
+
+                <div class="field">
+                  <label class="label">Username</label>
+                  <div class="control">
+                    <input class="input" type="text" name="username" ng-model="navbar.credentials.username">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control">
+                    <input class="input" type="password" name="password" ng-model="navbar.credentials.password">
+                  </div>
+                </div>
+
+                <button class="button is-primary">
+                  Sign In
+                </button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+        <a class='navbar-item'
+             ng-if="!navbar.user"
+             ng-click="navbar.showWarning = true">
+             <span class="icon"><i class="fa fa-pencil"></i></span> Register
+        </a>
+        <div class='navbar-item' ng-if="navbar.user">
+          <p>Hello, {{navbar.user.username}}</p
+        </div>
+        <a href="#!/profile" class='navbar-item' ng-if="navbar.user">
+          <button class="button is-primary">
+            <p><span class="icon"><i class="fa fa-user"></i></span> My profile</p>
+          </button>
+        </a>
+        <a href="#!/cart" class='navbar-item' ng-if="navbar.user">
+          <button class="button is-primary">
+            <p><span class="icon"><i class="fa fa-shopping-cart"></i></span> My cart <span class="tag">{{ navbar.user.cart.length }}</span></p>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="message is-warning" ng-if="navbar.showWarning">
+  <div class="message-body">
+    This is only a <strong>mock up shop application</strong>. You don't need to register, just sign in with any username and password. :)
+    <button class="delete is-pulled-right" ng-click="navbar.showWarning = false"></button>
+  </div>
+</div>

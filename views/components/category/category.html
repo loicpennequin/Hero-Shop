@@ -1,0 +1,68 @@
+<navbar user="category.user"
+        has-logged-in="category.hasLoggedIn()">
+</navbar>
+
+<section class="hero has-gradient-primary">
+  <div class="hero-body">
+    <div class="container">
+      <message from="'Category'" msg="category.message"></message>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h3 class="title is-2 has-text-white">{{ category.name}}</h3>
+    <div class="is-clearfix is-pulled-right">
+      <div class="field">
+        <label class="label">Search</label>
+        <div class="control has-icons-left">
+          <input class="input is-primary" type="text" ng-model="category.articleFilter">
+          <span class="icon is-small is-left">
+            <i class="fa fa-search"></i>
+          </span>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <label class="label">Sort By</label>
+          <div class="select is-primary">
+            <select ng-model="category.articleOrder">
+              <label class="label">Sort By</label>
+              <option ng-value="'name'">name (A to Z)</option>
+              <option ng-value="'-name'">name(Z to A)</option>
+              <option ng-value="'price'">Price(low to high)</option>
+              <option ng-value="'-price'">Price(high to low)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <ul class="articles-list">
+      <li class="card" ng-repeat="a in category.articles | orderBy : category.articleOrder | filter: category.articleFilter">
+        <header class="card-header">
+          <h4 class="title is-5">{{ a.name }}</h4>
+        </header>
+        <div class="card-content">
+          <img ng-src="{{ a.image }}"
+               alt="portrait {{ a.name }}"
+               ng-class="{'owned' : category.userHasArticle(a) }">
+        </div>
+        <footer class="card-footer">
+          <button class="button is-dark"
+                  ng-click="category.addToCart(a)"
+                  ng-if="category.user"
+                  ng-disabled="category.userHasArticle(a)"
+                  ng-class="{'spinX' : category.userHasArticle(a) }">
+            <p>
+              {{ a.price }}
+              <span class="icon is-medium"><i class="fa fa-gg-circle has-text-warning"></i></span>
+            </p>
+          </button>
+          <button class="button is-primary">Details</button>
+        </footer>
+      </li>
+    </ul>
+  </div>
+</section>
